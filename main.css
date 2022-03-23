@@ -1,0 +1,154 @@
+*{
+	margin:0;
+	font-size:16px;
+}
+@media only screen and (max-width:1500px){
+	*{
+		font-size:10px;
+	}
+}
+.container{
+	margin-left:10%;
+	width:80%;
+	border-left:solid black 2px;	
+	border-right:solid black 2px;	
+	padding:2em;
+}
+.regex-box{
+	position:relative;
+	width: calc(100% - 2em);
+	padding:1em;
+	display:grid;
+	grid-template-columns:auto auto;
+	align-items:first baseline;
+	justify-content:center;
+	margin-bottom:5px;
+}
+.regex-box *{
+	font-size:1.15em;
+}
+.regex-box input{
+	width:8em;
+}
+.regex-box>div{
+	padding:2em;
+}
+.prog-box, .op-box{
+	display:flex;
+	flex-direction:column;
+	border: solid grey 1px;
+	padding:0.5em;
+	margin-bottom:10px;
+}
+.prog-box > button{
+	width:100%;
+	padding:1em;
+	font-size:1.15em;
+
+	margin-bottom:1em;
+}
+.format-cont{
+	display:inline-block;
+	padding:1em;
+}
+.format-cont > button, .op-spec > button{
+	position:relative;
+	display:inline-block;
+	padding:0.7em 1em;
+	background:none;
+	border:solid #347AC4 1px;
+	border-radius:5px;
+	margin-top:8px;
+}
+.format-cont > button:hover, .op-spec > button:hover{
+	background-color:#EEE;
+}
+.format-wrapper{
+	display:flex;
+}
+.format-box{
+	position:relative;
+	border:solid black 1px;
+	background-color:#CCC;
+	padding:1.6em 1.2em;
+	margin-right:3px;
+	height:1.7em;
+}
+.format-box > input{
+	width:3em;
+}
+.format-box > span{
+	position:absolute;
+	right:4px;
+	top:4px;
+	cursor:pointer;
+}
+.format-box > span[class=format-box-label]{
+	color:red;
+	font-style:italic;
+	position:absolute;
+	font-size:1.15em;
+	top:2em;
+	left:47%;
+	cursor:default;
+}
+.format-box > span[class=format-box-desc]{
+	position:relative;
+	font-weight:bold;
+	font-size:1.15em;
+	top:-1em;
+	cursor:default;
+}
+.format-box-arrow::before{
+	position:absolute;
+	width:90%;
+	content:'';
+	border-bottom:solid red 2px;
+	bottom:0.8em;
+	left:5%;
+}
+.format-box > select{
+	width:7em;
+}
+.op-row{
+	position:relative;
+	display:flex;
+	padding:1em;
+	padding-top:2em;
+	border-bottom:solid grey 1px;
+	margin-bottom:1em;
+}
+.op-row-label{
+	position:absolute;
+	font-size:1.2em;
+	font-weight:bold;
+	top:-0.2em;
+	left:-0.2em;
+}
+.op-preview{
+	display:flex;
+	position:relative;
+	width:60%;
+}
+.op-spec{
+	position:relative;
+	width:40%;
+}
+.op-spec *{
+	font-size:1.15em;
+}
+.op-spec input[type=number]{
+	width:4em;
+}
+.op-spec input[type="text"]{
+	width:8em;
+}
+.op-spec-wrapper{
+	display:flex;
+	flex-direction:column;
+}
+.spec-box{
+	display:flex;
+}
+
+

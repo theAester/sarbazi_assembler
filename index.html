@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		</style>
+		<link rel="stylesheet" href="main.css" >
+		<link rel="stylesheet" href="rest.css" >
+	</head>
+		<body>
+			<header>
+			</header>
+			<main>
+				<div class="container">
+					<div class="regex-box">
+						<div>
+							<label for="register-regex">Capture Registers with:</label>
+							<input type="text" name="register-regex" id="register-capt" value="R(\d\d)">
+						</div>
+						<div>
+							<label for="immediate-regex">Capture Immediate with:</label>
+							<input type="text" name="register-regex" id="immediate-capt" value="%(\d+)">
+						</div>
+						<div>
+							<label for="addr-bits">Address bits:</label>
+							<input type="number" name="addr-bits" id="address-bits" value="4">
+						</div>
+						<div>
+							<label for="word-sz">Word size:</label>
+							<input type="number" name="word-sz" id="word-size" value="32">
+						</div>
+					</div>
+					<div class="prog-box" id="prog_box">
+						<button onclick="generate_input()">new format</button>
+					</div>
+					<div class="op-box" id="op_box">
+
+					</div>
+					<div class="text-in">
+						<div class="text-cont">
+							<textarea class="textar" id="code-in"></textarea>
+						</div>
+						<div class="text-in-cont">
+							<button onclick="convert()">Convert</button>
+						</div>
+						<div class="text-cont">
+							<textarea class="textar" id="code-out" readonly></textarea>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer>
+			</footer>
+			<script src="gen2.js"></script>
+			<script src="gen.js"></script>
+		</body>
+</html>
