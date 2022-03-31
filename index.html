@@ -5,20 +5,30 @@
 		</style>
 		<link rel="stylesheet" href="main.css" >
 		<link rel="stylesheet" href="rest.css" >
+		<link rel="stylesheet" href="headerfooter.css" >
 	</head>
 		<body>
 			<header>
+				<div class="header-up">
+				</div>
+				<nav>
+					<label for="loader">Load Machine</label>
+					<input type="file" id="loader" />
+					
+					<label for="saver">Save Machine</label>
+					<input type="file" id="saver" />
+				</nav>
 			</header>
 			<main>
 				<div class="container">
 					<div class="regex-box">
 						<div>
 							<label for="register-regex">Capture Registers with:</label>
-							<input type="text" name="register-regex" id="register-capt" value="R(\d\d)">
+							<input type="text" name="register-regex" id="register-capt" value="R(\d{1,2})">
 						</div>
 						<div>
 							<label for="immediate-regex">Capture Immediate with:</label>
-							<input type="text" name="register-regex" id="immediate-capt" value="%(\d+)">
+							<input type="text" name="register-regex" id="immediate-capt" value="#(\d+)">
 						</div>
 						<div>
 							<label for="addr-bits">Address bits:</label>
@@ -28,6 +38,11 @@
 							<label for="word-sz">Word size:</label>
 							<input type="number" name="word-sz" id="word-size" value="32">
 						</div>
+						<div>
+							<label for="addr-u">Addresable unit:</label>
+							<input type="number" name="addr-unit" id="addr-u" value="8">
+						</div>
+
 					</div>
 					<div class="prog-box" id="prog_box">
 						<button onclick="generate_input()">new format</button>
@@ -52,5 +67,8 @@
 			</footer>
 			<script src="gen2.js"></script>
 			<script src="gen.js"></script>
+			<script src="convert.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+			<script src="saveload.js"></script>
 		</body>
 </html>
